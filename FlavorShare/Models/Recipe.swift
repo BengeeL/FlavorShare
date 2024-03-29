@@ -7,41 +7,27 @@
 
 import Foundation
 
-struct Recipe {
-    let name: String
-    let image: String // Path to image resource
-    let description: String
-    let stars: Int
-
+struct Recipe: Identifiable, Hashable, Codable {
+    let id: String
+    let ownerUid: String
     
-    let ingredients: [Ingredient] // List of ingredients
-    let instructions: [String] // List of instruction steps
+    let imageURL: String
+    let timestamp: Date
     
-    let cookTime: Int // Cooking time in minutes (optional)
-    let servings: Int // Number of servings (optional)
-    let calories: Int
-    let nutitionalValue: Dictionary<String, Int> // <Nutrition name, Grams> Exemple {"Protein": 19}
+    var title: String
+    var description: String
     
-    init(name: String, 
-         image: String,
-         description: String,
-         stars: Int,
-         ingredients: [Ingredient],
-         instructions: [String],
-         cookTime: Int? = nil,
-         servings: Int? = nil,
-         calories: Int,
-         nutitionalValue: Dictionary<String, Int>
-    ) {
-        self.name = name
-        self.image = image
-        self.description = description
-        self.stars = stars
-        self.ingredients = ingredients
-        self.instructions = instructions
-        self.cookTime = cookTime ?? 0 // Set default value to 0 if cookTime is nil
-        self.servings = servings ?? 1 // Set default value to 1 if servings is nil
-        self.calories = calories
-        self.nutitionalValue = nutitionalValue
-    }
+    var stars: Int?
+    
+    var likes: Int
+    var user: User?
+    var ingredients: [Ingredient]
+    var instructions: [Instruction]
+    
+    var cookTime: Int
+    var servings: Int
+    var type: CuisineType
+    var calories: Int?
+    var nutitionalValue: NutritionalValues?
 }
+
