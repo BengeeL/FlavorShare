@@ -1,6 +1,8 @@
 # FlavorShare
 
-FlavorShare is an innovative iOS app designed to enhance your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.
+FlavorShare is an innovative iOS app that enhances your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.
+
+**Flavorshare is my very first iOS app, created during my free time as I learned and experimented with iOS development. I’m incredibly proud of what I’ve achieved so far and excited to share it with you.** 
 
 ## Features
 ### Implemented
@@ -27,7 +29,7 @@ FlavorShare is an innovative iOS app designed to enhance your culinary experienc
 
 ## Screenshots
 
-The following screenshots explore the latest UI for the app. Click on the images to view them in full size.
+The following screenshots explore the app's latest UI. Click on the images to view them in full size.
 
 ### App Icon
 ![App Icon](readme_ressources/icon.jpg)
@@ -43,16 +45,24 @@ The following screenshots explore the latest UI for the app. Click on the images
 
 ### Home Screen View
 ![Home Screen](readme_ressources/home.jpg)
+![Home Screen Post](readme_ressources/home_post.jpg)
 
-### Profile View
-![Profile](readme_ressources/profile.jpg)
-![Profile Edit](readme_ressources/profile_edit.jpg)
+### Recipe View View
+![Recipe View](readme_ressources/recipe_view.jpg)
 
 ### Explore View
 ![Search](readme_ressources/explore.jpg)
 
-### Recipe View View
-![Recipe View](readme_ressources/recipe.jpg)
+### Your Week View
+![Your Wiew](readme_ressources/grocery_list.jpg)  
+
+### Profile View
+![Profile](readme_ressources/profile.jpg)  
+![Profile Edit](readme_ressources/profile_edit.jpg)
+
+
+
+
 
 ## Database
 - **Firebase
