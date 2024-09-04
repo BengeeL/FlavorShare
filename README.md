@@ -64,25 +64,15 @@ To get started with Flavorshare, follow these steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/BengeeL/flavorshare.git
+    git clone https://github.com/BengeeL/FlavorShare.git
     ```
 
-2. **Navigate to the Project Directory**:
-    ```bash
-    cd flavorshare
-    ```
+2. **Open the Project**:
+    Open `FlavorShare.xcworkspace` in Xcode.
 
-3. **Install Dependencies**:
-    ```bash
-    pod install
-    ```
-
-4. **Open the Project**:
-    Open `Flavorshare.xcworkspace` in Xcode.
-
-5. **Build and Run**:
+3. **Build and Run**:
     Build and run the project on a simulator or a physical device.
 
 ## Contact
 
-For any questions or feedback, please reach out to us at [benjamin.lefebvre.1024@gmail.com](mailto:benjamin.lefebvre.1024@gmail.com).
+If you have any questions or feedback, please email at [benjamin.lefebvre.1024@gmail.com](mailto:benjamin.lefebvre.1024@gmail.com).
