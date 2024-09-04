@@ -1,6 +1,6 @@
-# Flavorshare
+# FlavorShare
 
-Flavorshare is an innovative iOS app designed to enhance your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.
+FlavorShare is an innovative iOS app designed to enhance your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.
 
 ## Screenshots
 
@@ -10,7 +10,7 @@ Explore the app through the following screenshots. Click on the images to view t
 ![App Icon](https://drive.google.com/uc?id=1bE1KmwFR3nixOwlhi3hVjoprBfbk2usa)
 
 ### Welcome Page
-![Welcome Page](https://drive.google.com/uc?id=YOUR_IMAGE_ID)
+![Welcome Page](https://drive.google.com/uc?id=1QGpOhKXnS0QbfINYXRErwyhKqq5u3BfK)
 
 ### Login
 ![Login](https://drive.google.com/uc?id=YOUR_IMAGE_ID)
@@ -87,26 +87,6 @@ To get started with Flavorshare, follow these steps:
 5. **Build and Run**:
     Build and run the project on a simulator or a physical device.
 
-## Contributing
-
-We welcome contributions to Flavorshare! To contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them.
-4. Push your changes to your forked repository.
-5. Open a pull request describing your changes.
-
-Please ensure that your contributions adhere to the coding standards and best practices outlined in our contributing guidelines.
-
-## License
-
-Flavorshare is licensed under the [MIT License](LICENSE).
-
 ## Contact
 
-For any questions or feedback, please reach out to us at [your.email@example.com](mailto:your.email@example.com).
-
----
-
-Feel free to replace placeholders like `YOUR_IMAGE_ID` with the actual IDs from Google Drive or update links as needed. If you need any more customization or have additional content, just let me know!
+For any questions or feedback, please reach out to us at [benjamin.lefebvre.1024@gmail.com](mailto:benjamin.lefebvre.1024@gmail.com).
