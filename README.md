@@ -2,9 +2,32 @@
 
 FlavorShare is an innovative iOS app designed to enhance your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.
 
+## Features
+### Implemented
+- **User Authentication**: Secure login and registration system using Firebase Authentification.
+- **Newsfeed**: Keep yourself updated with what is happening within the community.
+- **Post Sharing**: Share your favourite food post with the community.
+- **Recipe Sharing**: Interact with the shared content using likes & comments.
+- **Grocery List**: Create & manage your grocery list.
+- **Profile Management**: Customize and manage your profile.
+- **Search/Follow**: Use Explore to find your friends and follow them.
+- **Recipe View**: See the instructions on a published recipe.
+
+### Coming Up
+- **Third-Party Login**: Connect using Google, Apple or Facebook.
+- **Recipe Sharing**: Share your favourite food recipe with the community.
+- **Weekly Meal Planning**: Add the recipes you want to cook throughout your week.
+- **Auto Generated Grocery List**: Based on your weekly meal plan, update your grocery list with the required items.
+- **Recipe Discovery**: Browse and search for recipes based on cuisine type, cooking time, ratings, etc.
+- **Personalized Recommendations**: Get recipe suggestions based on your preferences.
+- **Favorites**: Save your favourite recipes for quick access.
+- **Track your nutrition intake**: Get details (calories, fat, proteins, carbs and more.) on your daily food and compare them with your set targets.
+- **AI Nutritionist**: Get advice from our AI nutritionist about your current diet.
+- **Chat**: Stay in touch with your friends by sharing and writing to them via the chat functionality.
+
 ## Screenshots
 
-Explore the app through the following screenshots. Click on the images to view them in full size.
+The following screenshots explore the latest UI for the app. Click on the images to view them in full size.
 
 ### App Icon
 ![App Icon](readme_ressources/icon.jpg)
@@ -31,40 +54,9 @@ Explore the app through the following screenshots. Click on the images to view t
 ### Recipe View View
 ![Recipe View](readme_ressources/recipe.jpg)
 
-## DB
+## Database
 - **Firebase
-
-## Features
-
-- **User Authentication**: Secure login and registration system.
-- **Recipe Sharing**: Share your favorite recipes with the community.
-- **Recipe Discovery**: Browse and search for recipes.
-- **Profile Management**: Customize and manage your profile.
-- **Favorites**: Save your favorite recipes for quick access.
-- **Personalized Recommendations**: Get recipe suggestions based on your preferences.
-
-## Roadmap
-
-### Completed
-
-- [x] App Icon Design
-- [x] Welcome Page
-- [x] User Authentication (Login/Registration)
-- [x] Home Screen Implementation
-- [x] Profile Management
-- [x] Recipe Sharing and Discovery
-- [x] Basic Search Functionality
-- [x] Recipe View with Detailed Information
-
-### To Do
-
-- [ ] Advanced Search Filters
-- [ ] User Feedback System
-- [ ] Recipe Ratings and Reviews
-- [ ] Integration with Social Media
-- [ ] Dark Mode Support
-- [ ] Performance Optimization
-- [ ] Additional Recipe Categories
+- **Firestore
 
 ## Getting Started
 
@@ -72,7 +64,7 @@ To get started with Flavorshare, follow these steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/flavorshare.git
+    git clone https://github.com/BengeeL/flavorshare.git
     ```
 
 2. **Navigate to the Project Directory**:
