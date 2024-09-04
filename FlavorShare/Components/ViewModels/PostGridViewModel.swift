@@ -8,10 +8,11 @@
 import Foundation
 
 class PostGridViewModel: ObservableObject {
-    
+    // MARK: VARIABLES
     @Published var posts = [Post]()
     private let user: User
     
+    // MARK: INIT
     init(user: User) {
         self.user = user
         
@@ -20,6 +21,7 @@ class PostGridViewModel: ObservableObject {
         }
     }
     
+    // MARK: FUNCTIONS
     @MainActor
     func getUserPosts() async throws {
         self.posts = try await PostService.getUserPosts(withUid: user.id)

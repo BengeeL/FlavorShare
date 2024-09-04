@@ -9,13 +9,16 @@ import Foundation
 
 class NotificationManager {
     
+    // MARK: VARIABLES
     static let shared = NotificationManager()
     private let service = NotificationService()
     
+    // MARK: INIT
     private init() {
         
     }
     
+    // MARK: FUNCTIONS
     // Send Functions
     func uploadLikePostNotification(toUid uid: String, post: Post) async throws {
         try await service.sendNotification(toUid: uid, type: .likePost, post: post)

@@ -9,11 +9,13 @@ import Foundation
 
 @MainActor
 class NotificationViewModel: ObservableObject {
+    // MARK: VARIABLES
     @Published var notifications = [FSNotification]()
     
     private let service: NotificationService
     private var currentUser: User?
     
+    // MARK: INIT
     init(service: NotificationService) {
         self.service = service
         Task {
@@ -23,6 +25,7 @@ class NotificationViewModel: ObservableObject {
         self.currentUser = UserService.shared.currentUser
     }
     
+    // MARK: FUNCTIONS
     func getNotifications() async {
         do {
             self.notifications = try await service.getNotifications()

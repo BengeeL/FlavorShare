@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct LargeTitle: View {
+    // MARK: VARIABLES
     let title: String
     
+    
+    // MARK: BODY
     var body: some View {
         Text(title)
             .font(.largeTitle)

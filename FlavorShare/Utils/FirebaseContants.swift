@@ -19,6 +19,10 @@ struct FirebaseContants {
         return UsersCollection.document(uid).collection("user-notifications")
     }
     
+    static func GroceryListCollection(uid: String) -> CollectionReference {
+        return UsersCollection.document(uid).collection("grocery-list")
+    }
+    
     static func UserLikesCollection(uid: String) -> CollectionReference {
         UsersCollection.document(uid).collection("user-likes")
     }

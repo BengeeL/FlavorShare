@@ -12,7 +12,6 @@ import SwiftUI
 class RegisterViewModel: ObservableObject {
     
     // MARK: VARIABLES
-    
     // Text Fields
     @Published var firstName = ""
     @Published var lastName = ""

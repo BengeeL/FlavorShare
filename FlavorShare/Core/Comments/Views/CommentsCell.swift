@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct CommentsCell: View {
-    
+    // MARK: VARIABLES
     let comment: Comment
     private var user: User? {
         return comment.user
     }
     
+    // MARK: BODY
     var body: some View {
         HStack (spacing: 10){
             ProfilePicture(user: user, size: .small)

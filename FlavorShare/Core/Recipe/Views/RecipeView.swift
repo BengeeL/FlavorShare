@@ -52,12 +52,12 @@ struct RecipeView: View {
                 
                 // MARK: - RECIPE INFO
                 VStack (alignment: .leading) {
-                    // RECIPE TITLE
+                    // MARK: TITLE
                     LargeTitle(title: recipe.title)
                         .padding(.bottom, 10)
                         .padding(.top, 55)
                     
-                    // RECIPE CALORIES/COOK TIME
+                    // MARK: RECIPE CALORIES/COOK TIME
                     HStack (spacing: 10){
                         Text("\(recipe.cookTime) Minutes")
                             .font(.subheadline)
@@ -74,18 +74,18 @@ struct RecipeView: View {
                         Spacer()
                     }
                     
-                    // RECIPE STARS
+                    // MARK: RECIPE STARS
                     if let starsCount = recipe.stars {
                         StarComponent(numberOfStars: starsCount, size: .medium)
                             .padding(.vertical, 5)
                     }
                     
-                    // RECIPE DESCRIPTION
+                    // MARK: RECIPE DESCRIPTION
                     Text(recipe.description)
                         .foregroundStyle(Color("TextColor"))
                         .padding(.vertical, 10)
                     
-                    // RECIPE INGREDIENTS
+                    // MARK: RECIPE INGREDIENTS
                     Text("Ingredients")
                         .font(.title)
                         .padding(.top, 20)
@@ -100,7 +100,7 @@ struct RecipeView: View {
                         }
                     }
                     
-                    // RECIPE INSTRUCTIONS
+                    // MARK: RECIPE INSTRUCTIONS
                     Text("Instructions")
                         .font(.title)
                         .padding(.top, 20)

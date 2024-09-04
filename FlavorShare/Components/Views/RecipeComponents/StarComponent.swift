@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct StarComponent: View {
-    
+    // MARK: VARIABLES
     let numberOfStars: Int
     let size: Image.Scale
     
+    // MARK: BODY
     var body: some View {
         HStack (alignment: .center) {
             let stars = numberOfStars

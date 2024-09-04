@@ -11,17 +11,19 @@ import Combine
 
 @MainActor
 class ContentViewModel: ObservableObject {
-    
+    // MARK: VARIABLES
     private let service = AuthService.shared
     private var cancellables = Set<AnyCancellable>()
     
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     
+    // MARK: INIT
     init() {
         setupSuscribers()
     }
     
+    // MARK: FUNCTIONS
     func setupSuscribers() {
         service.$userSession
             .receive(on: DispatchQueue.main)

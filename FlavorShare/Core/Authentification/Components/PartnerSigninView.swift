@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct PartnerSigninView: View {
-
+    // MARK: VARIABLES
     let screenSize: CGRect = UIScreen.main.bounds
-
+    
+    // MARK: BODY
     var body: some View {
         VStack {
-            // Connect With
+            // MARK: OR CONTINUE WITH
             HStack{
                 Rectangle()
                     .fill(Color("TextColor"))
@@ -30,8 +31,9 @@ struct PartnerSigninView: View {
                     .ignoresSafeArea(.all)
             }
             
-            // Social Login Options
+            // MARK: LOGIN OPTIONS
             HStack(spacing: 20) {
+                // MARK: APPLE
                 Button(action: {
                     print("Apple Sign-In tapped")
                 }) {
@@ -41,6 +43,7 @@ struct PartnerSigninView: View {
                         .foregroundStyle(Color("TextColor"))
                 }
                 
+                // MARK: GOOGLE
                 Button(action: {
                     print("Google Sign-In tapped")
                 }) {
@@ -50,6 +53,7 @@ struct PartnerSigninView: View {
                         .foregroundStyle(.customRed)
                 }
                 
+                // MARK: META
                 Button(action: {
                     print("Facebook Sign-In tapped")
                 }) {

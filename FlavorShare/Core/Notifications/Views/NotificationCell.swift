@@ -10,6 +10,7 @@ import Firebase
 import Kingfisher
 
 struct NotificationCell: View {
+    // MARK: VARIABLES
     var notification: FSNotification
     
 //    private var isFollowed: Bool {
@@ -40,13 +41,15 @@ struct NotificationCell: View {
 //        }
 //    }
     
+    // MARK: BODY
     var body: some View {
         HStack {
+            // MARK: USER IMAGE
             NavigationLink(value: notification.user) {
                 ProfilePicture(user: notification.user, size: .small)
             }
             
-            // Notification Message
+            // MARK: MESSAGE
             HStack {
                 Text("\(notification.user?.username ?? "") ")
                     .font(.subheadline)
@@ -63,6 +66,7 @@ struct NotificationCell: View {
             
             Spacer()
             
+            // MARK: FOLLOW
             if (notification.type == .follow) {
                 Button(action: {
                     handleFollowTapped()
@@ -91,6 +95,7 @@ struct NotificationCell: View {
         .padding(.horizontal)
     }
     
+    // MARK: FUNCTIONS
     func handleFollowTapped() {
 //        if isFollowed {
 //            viewModel.unfollow()

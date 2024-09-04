@@ -9,8 +9,10 @@ import Foundation
 
 @MainActor
 class FeedCellViewModel: ObservableObject {
+    // MARK: VARIABLES
     @Published var post: Post
     
+    // MARK: INIT
     init (post: Post) {
         self.post = post
         Task {
@@ -18,6 +20,7 @@ class FeedCellViewModel: ObservableObject {
         }
     }
     
+    // MARK: FUNCTIONS
     func like() async throws {
         do {
             let tempPost = post

@@ -9,6 +9,7 @@
 import SwiftUI
 import iPhoneNumberField
 
+// MARK: INPUT TYPE
 enum InputType {
     case text
     case secure
@@ -17,6 +18,7 @@ enum InputType {
 }
 
 struct FormInput: View {
+    // MARK: VARIABLES
     var text: Binding<String> = .constant("")
     let placeholder: String
     let textContent: UITextContentType
@@ -25,10 +27,11 @@ struct FormInput: View {
     var datafieldType: InputType = .text
     var dateSelection: Binding<Date> = .constant(Date())
     
+    // MARK: BODY
     var body: some View {
         VStack (alignment: .leading, spacing: 5) {
             
-            // Input Field
+            // MARK: TEXTFIELD
             switch datafieldType {
             case .text:
                 TextField(placeholder, text: text)
@@ -70,12 +73,12 @@ struct FormInput: View {
             }
             
             
-            // Decorator
+            // MARK: DECORATION LINE
             Rectangle()
                 .fill(LinearGradient(gradient: .init(colors: [.customBlue, .customGreen]), startPoint: .leading, endPoint: .trailing))
                 .frame(height: 5)
             
-            // Error Message/Handling
+            // MARK: ERROR
             Text(errorMessage.wrappedValue)
                 .font(.system(size: 10))
                 .foregroundStyle(.customRed)

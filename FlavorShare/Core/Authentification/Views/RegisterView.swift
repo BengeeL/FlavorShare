@@ -10,6 +10,7 @@ import iPhoneNumberField
 
 struct RegisterView: View {
     
+    // MARK: VARIABLES
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @StateObject var viewModel = RegisterViewModel()
@@ -17,32 +18,30 @@ struct RegisterView: View {
     
     private let screenSize: CGRect = UIScreen.main.bounds
     
+    // MARK: BODY
     var body: some View {
         
         ZStack{
-            // Background
+            // MARK: BACKGROUND
             Image("welcomeViewBackground")
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea(.all)
                 .blur(radius: 10.0)
             
-            // Centent Overlay
             VStack (){
+                // MARK: TITLE
                 LogoTitle()
                 
-                // Form
                 ZStack{
-                    // Tile
+                    // MARK: TILE
                     RoundedRectangle(cornerRadius: 40.0)
                         .fill(Color("TileColor"))
                         .frame(width: screenSize.width)
                         .ignoresSafeArea(.all)
                     
-                    // Fields
                     VStack(spacing: 10) {
-                        
-                        // Login Section
+                        // MARK: LOGIN SECTION
                         VStack (alignment: .center) {
                             Text("If you already have an account,")
                                 .foregroundStyle(Color("TextColor"))
@@ -119,6 +118,7 @@ struct RegisterView: View {
                         }
                         .frame(width: screenSize.width - 50)
                         
+                        // MARK: REGISTER BUTTON
                         VStack {
                             Button {
                                 Task {
@@ -145,6 +145,7 @@ struct RegisterView: View {
                 }
             }
             
+            // MARK: LOADING SCREEN 
             if (viewModel.isLoading) {
                 LoadingScreen()
             }

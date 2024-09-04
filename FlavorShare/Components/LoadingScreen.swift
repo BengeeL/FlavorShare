@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoadingScreen: View {
+    // MARK: BODY
     var body: some View {
         ZStack {
             Rectangle()

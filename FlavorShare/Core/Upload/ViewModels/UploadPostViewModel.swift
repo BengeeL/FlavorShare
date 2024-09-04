@@ -12,7 +12,7 @@ import Firebase
 
 @MainActor
 class UploadPostViewModel: ObservableObject {
-    
+    // MARK: VARIABLES
     @Published var selectedImage: PhotosPickerItem? {
         didSet {
             Task {
@@ -25,6 +25,7 @@ class UploadPostViewModel: ObservableObject {
 
     private var uiImage: UIImage?
     
+    // MARK: FUNCTIONS
     func loadImage(fromItem item: PhotosPickerItem?) async {
         guard let item = item else { return }
         

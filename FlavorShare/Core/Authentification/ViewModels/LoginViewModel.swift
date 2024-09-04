@@ -9,7 +9,7 @@ import Foundation
 
 @MainActor
 class LoginViewModel: ObservableObject{
-    
+    // MARK: VARIABLES
     @Published var email = ""
     @Published var password = ""
     
@@ -17,6 +17,7 @@ class LoginViewModel: ObservableObject{
     
     @Published var isLoading = false
     
+    // MARK: FUNCTIONS
     func signIn() async throws {
         loginError = ""
         isLoading = true

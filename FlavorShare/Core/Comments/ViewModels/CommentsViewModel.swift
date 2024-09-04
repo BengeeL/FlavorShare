@@ -9,11 +9,19 @@ import Firebase
 
 @MainActor
 class CommentsViewModel: ObservableObject {
+    // MARK: TODO
+    // TODO: FIND BETTER WAY TO AVOID DATABASE QUERIES
+    //        comment.user = UserService.shared.currentUser
+    //        self.comments.insert(comment, at: 0)
+    //        self.comments[0].user = user
+    
+    // MARK: VARIABLES
     @Published var comments = [Comment]()
     
     private let post: Post
     private let service: CommentService
     
+    // MARK: INIT
     init (post: Post) {
         self.post = post
         self.service = CommentService(postId: post.id)
@@ -23,6 +31,7 @@ class CommentsViewModel: ObservableObject {
         }
     }
     
+    // MARK: FUNCTIONS
     func uploadComment(commentText: String) async throws {
         let commentTextCleaned = String.cleanString(commentText)
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -37,10 +46,6 @@ class CommentsViewModel: ObservableObject {
         
         try await service.uploadComment(comment)
         try await getPostComments()
-        // TODO: FIND BETTER WAY TO AVOID DATABASE QUERIES
-        //        comment.user = UserService.shared.currentUser
-        //        self.comments.insert(comment, at: 0)
-        //        self.comments[0].user = user
         
         try await NotificationManager.shared.uploadCommentNotification(toUid: post.ownerUid, post: post)
     }

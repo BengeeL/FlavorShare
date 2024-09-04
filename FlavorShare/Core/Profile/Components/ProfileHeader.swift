@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ProfileHeader: View {
-    
+    // MARK: VARIABLES
     @ObservedObject var viewModel: ProfileViewModel
     @State private var showEditProfile = false
-
+    
     private var user: User {
         return viewModel.user
     }
@@ -44,19 +44,21 @@ struct ProfileHeader: View {
         }
     }
     
+    // MARK: INIT
     init(user: User) {
         self.viewModel = ProfileViewModel(user: user)
     }
     
+    // MARK: BODY
     var body: some View {
         VStack (alignment: .leading) {
             HStack (alignment: .bottom) {
-                // Profile Image
+                // MARK: USER IMAGE
                 ProfilePicture(user: user, size: .large)
                 
                 Spacer()
                 
-                // User Stats
+                // MARK: STATS
                 VStack (alignment: .trailing){
                     UserStat(value: user.stats?.postCounts, title: "Posts")
                     
@@ -73,8 +75,8 @@ struct ProfileHeader: View {
                     }
                 }
             }
-    
-            // Username - Bio
+            
+            // MARK: USERNAME/BIO
             VStack (alignment: .leading, spacing: 5) {
                 Text(user.username)
                     .fontWeight(.bold)
@@ -86,7 +88,7 @@ struct ProfileHeader: View {
             .font(.subheadline)
             .padding(.vertical)
             
-            // Edit Profile Button
+            // MARK: EDIT/FOLLOW BUTTON
             Button(action: {
                 if (user.isCurrentUser) {
                     showEditProfile.toggle()
@@ -112,10 +114,11 @@ struct ProfileHeader: View {
             viewModel.isUserFollowed()
         }
         .fullScreenCover(isPresented: $showEditProfile) {
-           EditProfileView(user: user)
+            EditProfileView(user: user)
         }
     }
     
+    // MARK: FUNCTIONS
     func handleFollowTapped() {
         if isFollowed {
             viewModel.unfollow()

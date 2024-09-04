@@ -9,18 +9,20 @@ import SwiftUI
 import PhotosUI
 
 struct EditProfileView: View {
-    
+    // MARK: VARIABLES
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: EditProfileViewModel
     
+    // MARK: INIT
     init(user: User) {
         self._viewModel = StateObject(wrappedValue: EditProfileViewModel(user: user))
     }
     
+    // MARK: BODY
     var body: some View {
         ZStack {
             VStack {
-                // MARK: Toolbar
+                // MARK: TOOLBAR
                 VStack {
                     HStack {
                         Button("Cancel") {
@@ -53,7 +55,7 @@ struct EditProfileView: View {
                     Divider()
                 } // VStack
                 
-                // Edit Profile Picture
+                // MARK: EDIT PROFILE IMAGE
                 PhotosPicker(selection: $viewModel.selectedImage) {
                     VStack (spacing: 15){
                         VStack (spacing: 15) {
@@ -66,14 +68,14 @@ struct EditProfileView: View {
                                     .shadow(radius: 3)
                             } else {
                                 ProfilePicture(user: viewModel.user, size: .large)
-//                                Text("\(viewModel.user.firstName.first?.description ?? "")\(viewModel.user.lastName.first?.description ?? "")")
-//                                    .frame(width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 3)
-//                                    .font(.title)
-//                                    .fontWeight(.heavy)
-//                                    .background(Color("TileColor"))
-//                                    .foregroundStyle(.text)
-//                                    .clipShape(Circle())
-//                                    .shadow(radius: 3)
+                                //                                Text("\(viewModel.user.firstName.first?.description ?? "")\(viewModel.user.lastName.first?.description ?? "")")
+                                //                                    .frame(width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.width / 3)
+                                //                                    .font(.title)
+                                //                                    .fontWeight(.heavy)
+                                //                                    .background(Color("TileColor"))
+                                //                                    .foregroundStyle(.text)
+                                //                                    .clipShape(Circle())
+                                //                                    .shadow(radius: 3)
                             }
                             
                             Text("Edit Profile Picture")
@@ -87,7 +89,7 @@ struct EditProfileView: View {
                     }// VStack
                 }// PhotoPicker
                 
-                // MARK: Edit Info
+                // MARK: EDIT INFO
                 VStack {
                     // Edit First Name
                     EditFieldSetting(title: "First Name", placeholder: "John", text: $viewModel.firstName)

@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct UploadTextInput: View {
+    // MARK: VARIABLES
     @State var placehorder: String
     @Binding var text: String
     
+    // MARK: BODY
     var body: some View {
         TextField(placehorder, text: $text, axis: .vertical)
             .padding()

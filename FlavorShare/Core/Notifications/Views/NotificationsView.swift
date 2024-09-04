@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct NotificationsView: View {
-    
+    // MARK: VARIABLES
     @Environment(\.dismiss) private var dismiss
     @StateObject var viewModel = NotificationViewModel(service: NotificationService())
     
+    // MARK: BODY
     var body: some View {
         NavigationStack {
+            // MARK: NOTIFICATION LIST
             ScrollView {
                 LazyVStack (spacing: 15) {
                     ForEach (viewModel.notifications) { notification in
@@ -28,22 +30,16 @@ struct NotificationsView: View {
                 }
             }
             .navigationDestination(for: User.self, destination: { user in
-                ProfileView(user: user)
+                ProfileView(user: user, presentationMode: false)
             })
             .navigationDestination(for: Post.self, destination: { post in
                 FeedCell(post: post)
             })
             .navigationTitle("Notifications")
             .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button ("Back") {
-                        dismiss()
-                    }
-                }
-            }
+            .background(Color("BackgroundColor"))
         }
-        .background(Color("BackgroundColor"))
+        
     }
 }
 

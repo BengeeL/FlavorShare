@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LogoTitle: View {
+    // MARK: BODY 
     var body: some View {
         ZStack {
             Text("FlavorShare")

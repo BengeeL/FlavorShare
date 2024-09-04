@@ -9,6 +9,7 @@ import Foundation
 
 @MainActor
 class ProfileViewModel: ObservableObject {
+    
     @Published var user: User
     
     init(user: User) {

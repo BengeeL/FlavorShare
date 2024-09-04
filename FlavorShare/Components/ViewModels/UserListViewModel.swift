@@ -9,12 +9,15 @@ import Foundation
 
 @MainActor
 class UserListViewModel: ObservableObject {
+    // MARK: VARIABLES
     @Published var users = [User] ()
     
+    // MARK: INIT
     init() {
         
     }
     
+    // MARK: FUNCTIONS
     func getUsers(forConfig config: UserListConfig) async {
         do {
             self.users = try await UserService.getUsers(forConfig: config)

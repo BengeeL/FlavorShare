@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CommentsView: View {
-    
+    // MARK: VARIABLES
     @State private var commentText = ""
     @StateObject var viewModel: CommentsViewModel
     
@@ -16,12 +16,15 @@ struct CommentsView: View {
         return UserService.shared.currentUser
     }
     
+    // MARK: INIT
     init(post: Post) {
         self._viewModel = StateObject(wrappedValue: CommentsViewModel(post: post))
     }
     
+    // MARK: BODY
     var body: some View {
         VStack (alignment: .leading, spacing: 0) {
+            // MARK: TITLE
             LargeTitle(title: "Comments")
                 .padding(.top, 10)
                 .padding(.leading)
@@ -29,6 +32,7 @@ struct CommentsView: View {
             Divider()
                 .padding(.bottom)
             
+            // MARK: COMMENT LIST
             ScrollView {
                 LazyVStack (spacing: 20) {
                     ForEach(viewModel.comments) { comment in
@@ -45,6 +49,7 @@ struct CommentsView: View {
             
             Divider()
             
+            // MARK: NEW COMMENT FIELD 
             HStack (spacing: 10) {
                 ProfilePicture(user: currentUser, size: .small)
                 

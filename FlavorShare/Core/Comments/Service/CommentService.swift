@@ -9,9 +9,10 @@ import Firebase
 import FirebaseFirestoreSwift
 
 struct CommentService {
-    
+    // MARK: VARIABLES
     let postId: String
     
+    // MARK: FUNCTIONS
     func uploadComment(_ comment: Comment) async throws {
         guard let commentData = try? Firestore.Encoder().encode(comment) else { return }
         

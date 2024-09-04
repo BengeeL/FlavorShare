@@ -10,8 +10,9 @@ import SwiftUI
 struct UploadRecipeView: View {
     
     // MARK: TODO
-    // TODO: USE LIST LIKE REMINDER APP FOR INGREDIENTS & INSTRUCTIONS
+    // TODO: USE LIST LIKE REMINDER APP FOR INGREDIENTS & INSTRUCTIONS (CAN LOOK AT LIST CREATED FOR GROCERY LIST IN WEEKVIEW)
     
+    // MARK: VARIABLES
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State private var title = ""
@@ -20,11 +21,12 @@ struct UploadRecipeView: View {
     
     @StateObject var viewModel = UploadPostViewModel()
     
+    // MARK: BODY
     var body: some View {
         ZStack{
             ScrollView (.vertical) {
                 VStack (alignment: .leading) {
-                    // ACTION TOOLBAR
+                    // MARK: ACTION TOOLBAR
                     HStack {
                         Button {
                             clearDataAndCloseNewPost()
@@ -45,13 +47,13 @@ struct UploadRecipeView: View {
                     }
                     .padding(.vertical)
                     
-                    // PAGE TITLE
+                    // MARK: PAGE TITLE
                     LargeTitle(title: "New Recipe")
                     
-                    // UPLOAD IMAGE
+                    // MARK: UPLOAD IMAGE
                     UploadImage(image: $viewModel.postImage, imagePickerPresented: $imagePickerPresented)
                     
-                    // RECIPE INFO
+                    // MARK: RECIPE INFO
                     UploadTextInput(placehorder: "Recipe Name", text: $title)
                     
                     UploadTextInput(placehorder: "Recipe Description", text: $caption)

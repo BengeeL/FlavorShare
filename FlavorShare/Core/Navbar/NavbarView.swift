@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct NavbarView: View {
-    
+    // MARK: VARIABLES
     let user: User
     @State private var selectedIndex = 0
     
+    // MARK: BODY
     var body: some View {
         TabView (selection: $selectedIndex) {
             HomeView()

@@ -9,14 +9,17 @@ import Foundation
 import Firebase
 
 class HomeViewModel: ObservableObject {
+    // MARK: VARIABLES
     @Published var posts = [Post]()
         
+    // MARK: INIT
     init () {
         Task {
             try await getPosts()
         }
     }
     
+    // MARK: FUNCTIONS
     @MainActor
     func getPosts() async throws {
         self.posts = try await PostService.getFeedPosts()

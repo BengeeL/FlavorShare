@@ -11,7 +11,7 @@ import Firebase
 
 @MainActor
 class EditProfileViewModel: ObservableObject {
-    
+    // MARK: VARIABLES
     @Published var user: User
     @Published var selectedImage: PhotosPickerItem? {
         didSet {
@@ -32,6 +32,7 @@ class EditProfileViewModel: ObservableObject {
 //    @Published var phone = ""
 //    @Published var dateOfBirth = Date()
     
+    // MARK: INIT
     init(user: User) {
         self.user = user
     
@@ -43,6 +44,7 @@ class EditProfileViewModel: ObservableObject {
         lastName = user.lastName
     }
     
+    // MARK: FUNCTIONS
     func loadImage(fromItem item: PhotosPickerItem?) async {
         guard let item = item else { return }
         

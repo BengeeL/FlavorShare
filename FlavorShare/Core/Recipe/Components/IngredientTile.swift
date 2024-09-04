@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct IngredientTile: View {
-    
+    // MARK: VARIABLES
     let ingredient: Ingredient
 
+    // MARK: BODY 
     var body: some View {
         VStack (alignment: .leading){
             Spacer()

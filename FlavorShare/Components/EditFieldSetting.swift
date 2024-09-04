@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct EditFieldSetting: View {
-    
+    // MARK: VARIABLES
     let title: String
     let placeholder: String
     @Binding var text: String
     
+    // MARK: BODY 
     var body: some View {
         VStack {
             HStack {

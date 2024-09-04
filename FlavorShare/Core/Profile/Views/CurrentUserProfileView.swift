@@ -14,24 +14,25 @@ struct CurrentUserProfileView: View {
     // TODO: IMPLEMENT APP SETTING (3 LINES BUTTONS)
     // TODO: MODIFY THE CONTENT VIEW TO MAKE IT UNIQUE?
     
+    // MARK: VARIABLES
     @State var showNotification = false;
     let user: User
     
+    // MARK: BODY
     var body: some View {
         NavigationStack {
             ScrollView (.vertical) {
                 VStack {
+                    // MARK: PROFILE SECTION
                     VStack (alignment: .leading, spacing: 10) {
-                        // User Profile
                         ProfileHeader(user: user)
-                        
                     }
                     .padding(.horizontal)
                     .padding(.bottom)
                     
                     Divider()
                     
-                    // Posts Section
+                    // MARK: POST SECTION
                     PostGridView(user: user)
                 }
                 .padding(.top, 10)
@@ -44,8 +45,10 @@ struct CurrentUserProfileView: View {
                         .padding(.top, 10)
                 }
                 
+                // MARK: TOOLBAR ACTION BUTTONS
                 ToolbarItem(placement: .topBarTrailing) {
                     HStack {
+                        // MARK: NOTIFICATIONS
                         Button {
                             showNotification.toggle()
                         } label: {
@@ -53,6 +56,7 @@ struct CurrentUserProfileView: View {
                                 .foregroundStyle(.text)
                         }
                         
+                        // MARK: MESSAGES
                         Button {
                             
                         } label: {
@@ -60,6 +64,7 @@ struct CurrentUserProfileView: View {
                                 .foregroundStyle(.text)
                         }
                         
+                        // MARK: SETTINGS/CURRENTLY LOG OUT
                         Button {
                             AuthService.shared.signout()
                         } label: {
@@ -73,12 +78,12 @@ struct CurrentUserProfileView: View {
                 NotificationsView()
                     .presentationDragIndicator(.visible)
             })
-//            .fullScreenCover(isPresented: $showNotification) {
-//                NotificationsView()
-//            }
-//            .navigationDestination(isPresented: $showNotification, destination: {
-//                NotificationsView()
-//            })
+            //            .fullScreenCover(isPresented: $showNotification) {
+            //                NotificationsView()
+            //            }
+            //            .navigationDestination(isPresented: $showNotification, destination: {
+            //                NotificationsView()
+            //            })
             .background(Color("BackgroundColor"))
         }
     }

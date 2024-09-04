@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CircleGraph: View {
+    // MARK: VARIABLES
     @State private var drawingStroke = false
     let red = Color(#colorLiteral(red: 0.9843137255, green: 0.0862745098, blue: 0.3490196078, alpha: 1))
     let green = Color(#colorLiteral(red: 0.3254901961, green: 0.9058823529, blue: 0.568627451, alpha: 1))
@@ -18,6 +19,11 @@ struct CircleGraph: View {
     let color: Color
     let colorBackground: Color
     
+    let animation = Animation
+        .interactiveSpring(duration: 1, extraBounce: 0.15)
+        .delay(0.5)
+    
+    // MARK: INIT
     init(progress: CGFloat, title: String, color: Color?) {
         self.progress = progress
         self.title = title
@@ -46,10 +52,7 @@ struct CircleGraph: View {
         
     }
     
-    let animation = Animation
-        .interactiveSpring(duration: 1, extraBounce: 0.15)
-        .delay(0.5)
-    
+    // MARK: FUNCTIONS
     func ring(for color: Color) -> some View {
         // Background ring
         Circle()
@@ -67,6 +70,7 @@ struct CircleGraph: View {
             .rotationEffect(.degrees(-90))
     }
     
+    // MARK: BODY
     var body: some View {
         ring(for: color)
             .animation(animation, value: drawingStroke)

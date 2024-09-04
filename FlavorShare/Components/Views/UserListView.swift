@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct UserListView: View {
+    // MARK: VARIABLES
     @StateObject var viewModel = UserListViewModel()
     @State private var searchText = ""
     
     private let config: UserListConfig
     
+    // MARK: INIT
     init(config: UserListConfig) {
         self.config = config
     }
     
+    // MARK: BODY
     var body: some View {
         VStack (alignment: .leading){
+            
+            // MARK: RECENTLY VIEWED
             Text("Recent Accounts Viewed")
                 .font(.title)
                 .foregroundStyle(Color("TitleColor"))

@@ -11,15 +11,17 @@ import FirebaseFirestoreSwift
 import Firebase
 
 class AuthService {
-    
+    // MARK: VARIABLES
     @Published var userSession: FirebaseAuth.User?
     
     static let shared = AuthService()
     
+    // MARK: INIT
     init() {
         Task { try await loadUserData() }
     }
     
+    // MARK: FUNCTIONS 
     @MainActor
     func login(withEmail email: String, password: String) async throws {
         let result = try await Auth.auth().signIn(withEmail: email, password: password)

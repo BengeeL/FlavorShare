@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct RecipeSliderView: View {
+    // MARK: TODO
+    // TODO: Open new full
     
+    // MARK: VARIABLES
     @State var title: String
     @State var recipes: [Recipe]
     @State private var showMore = false
@@ -23,6 +26,7 @@ struct RecipeSliderView: View {
         }
     }
     
+    // MARK: FUNCTIONS
     private func padding(recipe: Recipe) -> Edge.Set? {
         if (recipeToDisplay.count == 0) {
             return nil
@@ -37,6 +41,7 @@ struct RecipeSliderView: View {
         return nil
     }
     
+    // MARK: BODY
     var body: some View {
         VStack {
             HStack(alignment: .bottom) {
@@ -45,7 +50,6 @@ struct RecipeSliderView: View {
                     .foregroundStyle(Color("TitleColor"))
                 Spacer()
                 Button(action: {
-                    // TODO: Open new full
                     print("See More Clicked!")
                 }, label: {
                     Text("See more")

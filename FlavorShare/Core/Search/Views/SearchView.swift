@@ -16,14 +16,18 @@ struct SearchView: View {
     // TODO: FILTER BY COST
     // TODO: FILTER BY
     
+    // MARK: VARIABLES
     @State private var searchText = ""
     @StateObject var viewModel = SearchViewModel()
     
+    // MARK: BODY
     var body: some View {
         NavigationStack {
             ScrollView {
+                // MARK: LATEST LIKED
                 RecipeSliderView(title: "Latest Liked", recipes: DeveloperPreview.recipes)
                 
+                // MARK: RECENT ACCOUNT VIEWED
                 VStack (alignment: .leading){
                     UserListView(config: .explore)
                 }
@@ -32,7 +36,7 @@ struct SearchView: View {
             }
             .background(Color("BackgroundColor"))
             .navigationDestination(for: User.self, destination: { user in
-                ProfileView(user: user)
+                ProfileView(user: user, presentationMode: false)
             })
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)

@@ -276,4 +276,50 @@ class DeveloperPreview {
             stepDescription: "Mix the Salade With all the veggies than split equally between the plates."
         )
     ]
+    
+    // MARK: - GROCERY ITEMS
+    static let groceryList: [GroceryItem] = [
+        .init(
+            id:NSUUID().uuidString,
+            category: "Produces",
+            name: "Cucumber",
+            quantity: 1,
+            isChecked: true
+        ),
+        .init(
+            id:NSUUID().uuidString,
+            category: "Produces",
+            name: "Carrot",
+            quantity: 3,
+            isChecked: false
+        ),
+        .init(
+            id:NSUUID().uuidString,
+            category: "Produces",
+            name: "Patato",
+            quantity: 1,
+            isChecked: false
+        ),
+        .init(
+            id:NSUUID().uuidString,
+            category: "Groceries",
+            name: "Rice",
+            quantity: 1,
+            isChecked: false
+        ),
+        .init(
+            id:NSUUID().uuidString,
+            category: "Groceries",
+            name: "Wine",
+            quantity: 4,
+            isChecked: false
+        ),
+        .init(
+            id:NSUUID().uuidString,
+            category: "Groceries",
+            name: "Chocolate",
+            quantity: 1,
+            isChecked: false
+        )
+    ]
 }

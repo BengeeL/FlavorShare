@@ -9,12 +9,8 @@ import SwiftUI
 import Kingfisher
 
 struct PostGridView: View {
-    
+    // MARK: VARIABLES
     @StateObject var viewModel: PostGridViewModel
-
-    init(user: User) {
-        self._viewModel = StateObject(wrappedValue: PostGridViewModel(user: user))
-    }
     
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
@@ -24,6 +20,12 @@ struct PostGridView: View {
     
     private let imageDimension: CGFloat = (UIScreen.main.bounds.width / 3) - 1
     
+    // MARK: INIT
+    init(user: User) {
+        self._viewModel = StateObject(wrappedValue: PostGridViewModel(user: user))
+    }
+    
+    // MARK: BODY 
     var body: some View {
         VStack(alignment: .leading) {
             Text("Content")

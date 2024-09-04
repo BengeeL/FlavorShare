@@ -9,7 +9,7 @@ import SwiftUI
 import PhotosUI
 
 struct UploadPostView: View {
-    
+    // MARK: VARIABLES
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State private var title = ""
@@ -18,11 +18,12 @@ struct UploadPostView: View {
     
     @StateObject var viewModel = UploadPostViewModel()
     
+    // MARK: BODY
     var body: some View {
         ZStack{
             ScrollView (.vertical) {
                 VStack (alignment: .leading) {
-                    // ACTION TOOLBAR
+                    // MARK: ACTION TOOLBAR
                     HStack {
                         Button {
                             clearDataAndCloseNewPost()
@@ -43,10 +44,10 @@ struct UploadPostView: View {
                     }
                     .padding(.vertical)
                     
-                    // PAGE TITLE
+                    // MARK: PAGE TITLE
                     LargeTitle(title: "New Post")
                     
-                    // UPLOAD IMAGE
+                    // MARK: UPLOAD IMAGE
                     UploadImage(image: $viewModel.postImage, imagePickerPresented: $imagePickerPresented)
 //                    ZStack {
 //                        Rectangle()
@@ -71,10 +72,10 @@ struct UploadPostView: View {
 //                    .cornerRadius(25)
 //                    .shadow(radius: 3)
                     
-                    // Title Field
+                    // MARK: TITLE
                     UploadTextInput(placehorder: "Post Title", text: $title)
                     
-                    // Caption Field
+                    // MARK: CAPTION
                     UploadTextInput(placehorder: "Post Caption", text: $caption)
                     
                     Spacer()
@@ -95,6 +96,7 @@ struct UploadPostView: View {
         }
     }
     
+    // MARK: FUNCTIONS
     func clearDataAndCloseNewPost() {
         title = ""
         caption = ""

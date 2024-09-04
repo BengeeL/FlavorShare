@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct UploadChoiceView: View {
-    
+    // MARK: VARIABLES
     private let buttonWidth = UIScreen.main.bounds.width / 2.5
     private let buttonHeight = UIScreen.main.bounds.height / 2.8
     
+    // MARK: BODY
     var body: some View {
         NavigationStack {
             VStack (alignment: .center, spacing: 20) {
                 HStack (alignment: .center, spacing: 20) {
+                    // MARK: SHARE POST
                     NavigationLink(destination: UploadPostView()) {
                         LargeTitle(title: "Share Post")
                             .shadow(color: .tile, radius: 30)
@@ -33,6 +35,7 @@ struct UploadChoiceView: View {
                             .shadow(radius: 3)
                     }
                     
+                    // MARK: SHARE RECIPE
                     NavigationLink(destination: UploadPostView()) {
                         LargeTitle(title: "Share Recipe")
                             .shadow(color: .tile, radius: 30)
@@ -50,6 +53,8 @@ struct UploadChoiceView: View {
                             .shadow(radius: 3)
                     }
                 }
+                
+                // MARK: SHARE STORY
                 HStack (alignment: .center, spacing: 20){
                     NavigationLink(destination: UploadPostView()) {
                         LargeTitle(title: "Share Story")

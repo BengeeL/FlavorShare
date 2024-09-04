@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: NUTRITION TILE SIZE
 enum NutritionTileSizes {
     case xSmall
     case small
@@ -28,13 +29,18 @@ enum NutritionTileSizes {
 }
 
 struct NutritionTileView: View {
+    // MARK: TODO
+    // TODO: Change prefix for adequat mesurement (g)
+
     
+    // MARK: VARIABLES
     let progress: CGFloat
     let title: String
     let size: NutritionTileSizes
     let isPercentage: Bool
     let color: Color?
 
+    // MARK: INIT
     init (progress: CGFloat, title: String, size: NutritionTileSizes, isPercentage: Bool) {
         self.progress = progress
         self.title = title
@@ -51,18 +57,23 @@ struct NutritionTileView: View {
         self.color = color
     }
     
+    // MARK: BODY
     var body: some View {
         ZStack {
+            // MARK: TILE
             Rectangle()
                 .foregroundStyle(.tile)
                 .cornerRadius(25)
                 .shadow(radius: 3)
 
+            // MARK: TILE CONTENT
             VStack {
+                // MARK: TITLE
                 Text(title)
                     .font(.title2)
                     .foregroundStyle(.title)
                 
+                // MARK: CIRCLE
                 ZStack {
                     CircleGraph(progress: progress, title: title, color: color)
                         .padding(.horizontal)
@@ -94,7 +105,6 @@ struct NutritionTileView: View {
                                     .foregroundStyle(.title)
                             }
                             
-                            // TODO: Change prefix for adequat mesurement (g)
                             Text("\(exempleValue) \(title.prefix(3).lowercased())")
                                 .font(.body)
                                 .padding(.top)

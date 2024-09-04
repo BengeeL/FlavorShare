@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    // MARK: VARIABLES
     @StateObject var viewModel = ContentViewModel()
     
+    // MARK: BODY
     var body: some View {
         Group {
             if viewModel.userSession == nil {

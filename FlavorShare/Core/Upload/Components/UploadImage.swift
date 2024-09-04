@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct UploadImage: View {
-    
+    // MARK: VARIABLES
     @Binding var image: Image?
     @Binding var imagePickerPresented: Bool
     
+    // MARK: BODY 
     var body: some View {
         ZStack {
             Rectangle()
