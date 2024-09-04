@@ -7,28 +7,32 @@ FlavorShare is an innovative iOS app designed to enhance your culinary experienc
 Explore the app through the following screenshots. Click on the images to view them in full size.
 
 ### App Icon
-![App Icon](https://drive.google.com/uc?id=1bE1KmwFR3nixOwlhi3hVjoprBfbk2usa)
+![App Icon](readme_ressources/icon.jpg)
 
-### Welcome Page
-![Welcome Page](https://drive.google.com/uc?id=1QGpOhKXnS0QbfINYXRErwyhKqq5u3BfK)
+### Welcome View
+![Welcome Page](readme_ressources/welcome.jpg)
 
-### Login
-![Login](https://drive.google.com/uc?id=YOUR_IMAGE_ID)
+### Login View
+![Login](readme_ressources/login.jpg)
 
-### Register
-![Register](https://drive.google.com/uc?id=YOUR_IMAGE_ID)
+### Register View
+![Register](readme_ressources/register.jpg)
 
-### Home Screen
-![Home Screen](https://drive.google.com/uc?id=YOUR_IMAGE_ID)
+### Home Screen View
+![Home Screen](readme_ressources/home.jpg)
 
-### Profile
-![Profile](https://drive.google.com/uc?id=YOUR_IMAGE_ID)
+### Profile View
+![Profile](readme_ressources/profile.jpg)
+![Profile Edit](readme_ressources/profile_edit.jpg)
 
-### Search
-![Search](https://drive.google.com/uc?id=YOUR_IMAGE_ID)
+### Explore View
+![Search](readme_ressources/explore.jpg)
 
-### Recipe View
-![Recipe View](https://drive.google.com/uc?id=YOUR_IMAGE_ID)
+### Recipe View View
+![Recipe View](readme_ressources/recipe.jpg)
+
+## DB
+- **Firebase
 
 ## Features
 
