@@ -1,6 +1,6 @@
 # FlavorShare
 
-FlavorShare is an innovative iOS app that enhances your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.
+[FlavorShare](https://flavorshare.app/) is an innovative iOS app that enhances your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.
 
 **Flavorshare is my very first iOS app, created during my free time as I learned and experimented with iOS development. I’m incredibly proud of what I’ve achieved so far and excited to share it with you.** 
 
