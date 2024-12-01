@@ -1,4 +1,4 @@
-# FlavorShare
+# FlavorShare - V1 Discontinued (Currently Work on Private Repo)
 
 [FlavorShare](https://flavorshare.app/) is an innovative iOS app that enhances your culinary experiences by sharing and discovering recipes. With an intuitive interface and rich features, Flavorshare is your go-to app for all things related to cooking and recipes.
 
